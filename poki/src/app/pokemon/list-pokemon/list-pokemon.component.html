@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col s6 m3" *ngFor="let item of pokemonList">
+      <div class="card darken-1" appBorderCard (click)="selectPokemon(item.id)">
+        <div class="card-image">
+          <img [src]="item.picture">
+        </div>
+        <div class="card-content dark-text">
+          <span class="card-title dark-text large">{{item.name}} </span>
+          <p><small>{{item.created | date}}</small></p>
+          <span *ngFor="let type of item.types" class="{{type | pokitypecolor  }} "> {{type}} </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
