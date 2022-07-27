@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col s12 m8 offset-m2">
+    <h2 class="center">List des articles</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <thead>
+              <tr>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Publié</th>
+                <th class="center col s4 m4 l4">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let article of articles; let i = index" >
+                <td>{{article.titre}} </td>
+                <td>{{article.description}} </td>
+                <td>{{article.published === 1 ? true : false}} </td>
+                <td class="center col s4 m4 l4">
+                  <span style="margin-top: 10%; margin-bottom: 10%;"
+                    class="btn-floating btn waves-effect waves-light blue modal-trigger"
+                    (click)="editArticle(article.id)"><i class="material-icons">mode_edit</i>
+                  </span>
+                  <span style="margin-top: 10%; margin-bottom: 10%;margin-left: 10%"
+                    class="btn-floating btn waves-effect waves-light red" (click)="removeArticle(article.id)"><i
+                      class="material-icons">delete</i>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

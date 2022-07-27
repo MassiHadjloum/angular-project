@@ -1,0 +1,38 @@
+<form (ngSubmit)="onSubmit()" #articleForm="ngForm">
+
+  <div class="row">
+    <div class="col s8 offset-s2">
+      <h2 class="center">Formulaire</h2>
+      <div class="card-panel">
+        <div class="form-group">
+          <label for="name">Titre</label>
+          <input type="text" class="form-control" id="name"
+          required [(ngModel)]="article.titre" value="article.titre"
+            name="name" #name="ngModel">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" class="form-control"
+          [value]="article.description" id="description" required
+            [(ngModel)]="article.description" name="desc" #descr="ngModel">
+        </div>
+        <p>
+          <label class="form-group">
+            <input type="checkbox" [value]="article.published"
+            [(ngModel)]="article.published" class="filled-in"
+              name="check" />
+            <span>Publié</span>
+          </label>
+        </p>
+
+        <div class="divider"></div>
+        <div class="section center">
+          <button type="submit" class="waves-effect waves-light btn"
+          [disabled]="!articleForm.form.valid">
+            Enregistrer</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
