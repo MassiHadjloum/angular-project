@@ -1,0 +1,20 @@
+
+<app-divider>
+  Modal
+</app-divider>
+
+<button class="ui primary button" (click)="clickActive()">Open</button>
+<app-modal-component *ngIf="active"  (close)="clickActive()">
+  <i modalTitle>
+    MODAL!
+  </i>
+  <p>Some details</p>
+  <ng-container modalFooter>
+    <button class="ui red button" (click)="clickActive">Close</button>
+  </ng-container >
+
+</app-modal-component>
+
+
+<app-divider>Accordion Component</app-divider>
+<app-accordion [items]="accordionItems" ></app-accordion>

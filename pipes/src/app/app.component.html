@@ -1,0 +1,69 @@
+<div class="container border mt-4 p-5">
+  <h3>Payment Form</h3>
+  <div class="row mb-4">
+    <div class="form-group col">
+      <label class="mb-1" for="">Payee Name</label>
+      <input class="form-control" type="text" (input)="onNameChange($event.target)">
+    </div>
+    <div class="col">
+      <label class="mb-1" for=""><b>Name</b></label>
+      <div>
+        {{name | titlecase }}
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="form-group col">
+      <label class="mb-1" for="">Payment Date</label>
+      <input class="form-control" type="date" (input)="onDateChange($event.target)">
+    </div>
+    <div class="col">
+      <label class="mb-1" for=""><b>Date</b></label>
+      <div>
+        {{date | date: 'MMMM d, y ' }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="form-group col">
+      <label class="mb-1" for="">Amount</label>
+      <input class="form-control" type="number" (input)="onAmountChange($event.target)">
+    </div>
+    <div class="col">
+      <label class="mb-1" for=""><b>Amount</b></label>
+      <div>
+       <!--  ${{amount | number: '1.2-2' }} -->
+        {{amount | currency}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="form-group col">
+      <label class="mb-1" for="">Miles</label>
+      <input class="form-control" type="number" (input)="onMilesChange($event.target)">
+    </div>
+    <div class="col">
+      <label class="mb-1" for=""><b>Kilometers</b></label>
+      <div>
+        {{miles | mlKm: 'km' | number: '1.0-2'}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="form-group col">
+      <label class="mb-1" for="">Celsius C°</label>
+      <input class="form-control" type="number" (input)="onCelsiusChange($event.target)">
+    </div>
+    <div class="col">
+      <label for=""><b>Fahrenheit</b></label>
+      <div>
+        {{celsius | celFrh}} F°
+      </div>
+    </div>
+  </div>
+
+
+</div>

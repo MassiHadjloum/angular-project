@@ -1,0 +1,13 @@
+.underlined {
+  color: rgb(238, 149, 250);
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: blueviolet;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background-color: purple;
+}

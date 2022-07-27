@@ -1,0 +1,24 @@
+.section2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1520px;
+  margin-top: 5%;
+  padding-bottom: 10%;
+}
+
+.second-title {
+  width: 70%;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15%;
+
+}

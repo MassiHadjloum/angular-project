@@ -1,0 +1,28 @@
+.section {
+  height: 900px;
+  padding-top: 5%;
+  background-image: url("../../../assets/img/photos/bg4.jpg");
+  text-align: center;
+}
+
+.roww {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.col1{
+  margin: 5%;
+  margin-left: 20%;
+  padding: 2%;
+  height: 30%;
+  width: 100%;
+  text-align: left;
+}
+
+.img {
+  width: 80%;
+  height: 80%;
+}

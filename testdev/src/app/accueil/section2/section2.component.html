@@ -1,0 +1,29 @@
+<section class="wrapper bg-light" >
+  <div class="container py-14 py-md-17">
+    <div class="row text-center" id="what-we-do">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">What We Do?</h2>
+        <h3 class="display-4 mb-10 px-xl-10">The service we offer is specifically designed to meet your needs.</h3>
+      </div>
+    </div>
+    <div class="position-relative mb-14 mb-md-17">
+      <div class="shape rounded-circle bg-soft-primary rellax w-16 h-16" data-rellax-speed="1"
+        style="bottom: -0.5rem; right: -2.5rem; z-index: 0;"></div>
+      <div class="shape bg-dot primary rellax w-16 h-17" data-rellax-speed="1"
+        style="top: -0.5rem; left: -2.5rem; z-index: 0;"></div>
+      <div class="row gx-md-5 gy-5 text-center ">
+        <div class="cards jumbotron jumbotron-fluid">
+          <app-card *ngFor="let item of dataCard"
+              [icon]="item.icon"
+              [title]="item.title"
+              [content]="item.content"
+              [trailing]="item.trailing">
+            </app-card>
+        </div>
+        <app-choose-us [items]="dataAccordion"></app-choose-us>
+        <app-our-solutions></app-our-solutions>
+
+      </div>
+    </div>
+  </div>
+</section>

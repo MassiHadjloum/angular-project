@@ -1,0 +1,20 @@
+<section class="wrapper bg-gray">
+  <div class="container py-14 pt-md-0 pb-md-17">
+    <app-stars></app-stars>
+
+    <div class="row text-center">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">Our Pricing</h2>
+        <h3 class="display-4 mb-10 px-xl-10">We offer great prices, premium products and quality service for your
+          business.</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-11 mx-auto">
+        <app-our-pricing [list]="dataPricing"></app-our-pricing>
+        <app-detail-pricing></app-detail-pricing>
+      </div>
+    </div>
+  </div>
+</section>

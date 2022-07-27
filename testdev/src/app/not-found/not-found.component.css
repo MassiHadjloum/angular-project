@@ -1,0 +1,14 @@
+.section {
+  height: 900px;
+  padding-top: 5%;
+  background-image: url("../../assets/img/photos/bg4.jpg");
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+  margin: 5%;
+  margin-top: 8%;
+  padding: 3%;
+}

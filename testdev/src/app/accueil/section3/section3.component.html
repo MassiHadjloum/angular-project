@@ -1,0 +1,23 @@
+<section class="wrapper bg-gray" id="case1">
+  <div class="container py-14 pt-md-0 pb-md-16">
+    <app-stat></app-stat>
+    <div class="row text-center">
+      <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">Case Studies</h2>
+        <h3 class="display-4 mb-6">Check out some of our awesome projects with creative ideas and great design.</h3>
+      </div>
+    </div>
+
+    <div class="position-relative">
+      <div class="shape bg-dot primary rellax w-17 h-20" data-rellax-speed="1" style="top: 0; left: -1.7rem;"></div>
+      <div class="carousel  gap-small blog grid-view" data-margin="0" data-dots="true" data-autoplay="false"
+        data-autoplay-timeout="5000"
+        data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
+        <div class="cards">
+          <app-cards *ngFor="let item of dataCards" [title]="item.title" [content]="item.content" [date]="item.date"
+            [srcImage]="item.srcImage" [footer]="item.footer"></app-cards>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

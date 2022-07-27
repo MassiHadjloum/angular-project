@@ -1,0 +1,19 @@
+<div class="ui items">
+  <div class="item" *ngFor="let item of data" style="background-color: white; padding: 1%;">
+    <div class="image">
+      <img [src]="item.image" alt="">
+    </div>
+    <div class="content">
+      <a class="header"> {{item.title}} </a>
+      <div class="meta">
+        <span>Description</span>
+      </div>
+      <div class="description">
+        {{item.description}}
+      </div>
+      <div class="extra">
+        Some extra informations
+      </div>
+    </div>
+  </div>
+</div>

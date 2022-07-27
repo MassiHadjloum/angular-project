@@ -1,0 +1,9 @@
+.hwo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+  margin-bottom: 5%;
+
+}

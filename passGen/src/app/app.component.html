@@ -1,0 +1,107 @@
+<div style="padding-top: 3%;"></div>
+ 
+
+<div class="container-sm  p-5 mt-5 mb-3 border bg-dark text-white ct">
+  <h1>Password Generator</h1>
+  <div class="form-floating mb-3 mt-3">
+    <label for="length">Length</label>
+    <input type="number" (input)="onChangeLength($event.target)" class="form-control" name="length"
+      placeholder="Enter length" />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-text">
+      <input type="checkbox" (change)="onChangeUseLetters()">
+    </div>
+    <input type="text" class="form-control" disabled placeholder="Use Letters" />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-text">
+      <input type="checkbox" (change)="onChangeUseNumbers()">
+    </div>
+    <input type="text" class="form-control" disabled placeholder="Use Numbers" use Numbers />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-text">
+      <input type="checkbox" (change)="onChangeUseSymbols()">
+    </div>
+    <input type="text" class="form-control" disabled placeholder="Use Symbols" use Symbols />
+  </div>
+
+  <div>
+    <button
+      (click)="onButtonClick()"
+      [disabled]="!(length && (letters || numbers || symbole)) "
+      class="btn btn-success"
+    >
+    Generate</button>
+  </div>
+
+  <div class="form-floating mb-3 mt-3" *ngIf="getPassword()">
+    <label for="">Your password</label>
+    <input type="text" class="form-control" [value]="getPassword()" />
+  </div>
+
+</div>
+
+<div style="margin-top: 6%; margin-bottom: 6%;"></div>
+
+<div class="container">
+  <div class="columns is-centered">
+    <div class="box column is-one-third">
+      <h1 class="title has-text-centered">Password Generator</h1>
+
+      <div class="field">
+        <label>Length</label>
+        <input class="input" (input)="onChangeLength($event.target)" />
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input (change)="onChangeUseLetters()" type="checkbox" />
+            Use Letters
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input (change)="onChangeUseNumbers()" type="checkbox" />
+            Use Numbers
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input (change)="onChangeUseSymbols()" type="checkbox" />
+            Use Symbols
+          </label>
+        </div>
+      </div>
+
+      <button
+        [disabled]="
+          !(length && (letters || symbole || numbers))
+        "
+        (click)="onButtonClick()"
+        class="button is-link is-fullwidth"
+      >
+        Generate!
+      </button>
+
+      <div class="box" *ngIf="getPassword()">
+        <label>Your Password</label>
+        <input class="input" [value]="getPassword()" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 1%; padding-bottom: 1%;"></div>
+

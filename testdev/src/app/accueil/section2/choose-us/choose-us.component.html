@@ -1,0 +1,31 @@
+<div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center mb-14 mb-md-17" id="choose-us">
+  <div class="col-lg-7">
+    <figure><img class="w-auto" src="../../../assets/img/illustrations/i11.png"
+        srcset="../../../assets/img/illustrations/i11@2x.png 2x" alt="" /></figure>
+  </div>
+  <div class="col-lg-5" style="text-align: start;">
+
+     <app-col-title
+      [classTitle]="'fs-15 text-uppercase text-primary mb-3'"
+      [title]="'Why Choose Us?'"
+      [classSubTitle]="'display-4 second-title'"
+      [subTitle]="'We bring solutions to make life easier for our clients.'"
+      ></app-col-title>
+
+     <div class="ui accordion ">
+      <ng-container *ngFor="let item of items; let i = index">
+        <div class="title hover" [ngClass]="{active: i === openItem}"
+         (click)="handleIndex(i)">
+          <i class="dropdown icon"></i>
+          {{ item.title }}
+        </div>
+        <div [ngClass]="{active: i === openItem}" class="content">
+          <div class="transition" [ngClass]="{visible: i === openItem}">
+            {{ item.content }}
+
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="ui fluid styled accordion">
+  <ng-container *ngFor="let item of items; let i = index;">
+    <div class="title" [ngClass]="openItemIndex == i ? 'active' : ''"
+    (click)="onHide(i)">
+      <i class="dropdown icon"></i>
+      {{item.title}}
+    </div>
+    <div class="content" [ngClass]="openItemIndex == i ? 'active' : ''">
+      <p> {{item.content}} </p>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <nav>
+    <ul class="pagination">
+      <li
+      [appClass]="{ disabled: currentPage === 0}"
+      class="page-item">
+        <a href="#" class="page-link" (click)="goPrev()">Prev</a>
+      </li>
+      <ng-container
+      *appTimes="images.length; let i = idx; let c =  color"
+      >
+        <li class="page-item"
+        [appClass]="{active: i === currentPage}"
+          *ngIf="checkWindowIndex(i)"
+        >
+          <a href="#" class="page-link" (click)="upDateCurrent(i)">{{i+1}}</a>
+        </li>
+      </ng-container>
+      <li
+        [appClass]="{ disabled: currentPage === images.length - 1}"
+      class="page-item">
+        <a href="#" class="page-link" (click)="goNext()">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div>
+    <h4  >{{ images[currentPage].title }}</h4>
+    <img [src]="images[currentPage].url" alt="">
+  </div>
+
+
+
+</div>
